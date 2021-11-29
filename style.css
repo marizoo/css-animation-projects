@@ -1,0 +1,621 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  margin-top: 20px;
+}
+
+/* ---------------- */
+/* 02. */
+/* ----------------------- */
+
+/* ---------------- */
+/* 12. DROP animation */
+.body12 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 500px;
+}
+/* 12. DROP animation */
+/* ----------------------- */
+
+/* ----------------------- */
+/* 11.Loading Animation -4. */
+.body11 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 500px;
+}
+
+.h1-11 {
+  font-size: 50px;
+  text-shadow: -1px -1px 0 gray, 1px -1px 0 gray, -1px 1px 0 gray,
+    1px 1px 0 gray;
+  color: white;
+  position: relative;
+}
+
+.h1-11::before {
+  content: "loading...";
+  color: lightpink;
+  position: absolute;
+  width: 0;
+  overflow: hidden;
+  animation: move11 4s linear infinite;
+}
+
+@keyframes move11 {
+  to {
+    width: 100%;
+  }
+}
+
+/* 11.Loading Animation -4. */
+/* ----------------------- */
+
+/* ---------------- */
+/* 10.Loading Animation -3. */
+.body10 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 500px;
+}
+
+.container10 {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1-10 {
+  color: coral;
+  font-weight: 300;
+}
+
+.circle10-cont {
+  display: flex;
+  border-bottom: 2px solid lightcoral;
+  padding: 0;
+}
+
+.circle10 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 10px;
+  animation: loading10 0.5s alternate infinite;
+}
+
+.circle10-1 {
+  background-color: tomato;
+}
+.circle10-2 {
+  background-color: salmon;
+  animation-delay: 0.1s;
+}
+.circle10-3 {
+  background-color: coral;
+  animation-delay: 0.2s;
+}
+
+@keyframes loading10 {
+  to {
+    transform: translateY(-100px);
+  }
+}
+/* 10.Loading Animation -3. */
+/* ----------------------- */
+
+/* ---------------- */
+/* 09.Loading Animation -2 */
+.body9 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 500px;
+}
+
+.container9 {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1-9 {
+  color: coral;
+}
+
+.circle9-cont {
+  display: flex;
+}
+
+.circle9 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 10px;
+  animation: loading9 0.5s alternate infinite;
+}
+
+.circle9-1 {
+  background-color: tomato;
+}
+.circle9-2 {
+  background-color: salmon;
+}
+.circle9-3 {
+  background-color: coral;
+}
+
+@keyframes loading9 {
+  25% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(20px, -20px);
+  }
+  75% {
+    transform: translate(30px, -10px);
+  }
+  100% {
+    transform: translate(30px, 0px);
+  }
+}
+/* 09.Loading Animation -2 */
+/* ----------------------- */
+
+/* ---------------- */
+/* 08. Loading Animation -1 */
+.body8 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 500px;
+}
+
+.container8 {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1-8 {
+  color: coral;
+}
+
+.circle8-cont {
+  display: flex;
+}
+
+.circle8 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 10px;
+  animation: loading8 1s alternate infinite;
+  opacity: 0;
+}
+
+.circle8-1 {
+  background-color: tomato;
+}
+.circle8-2 {
+  background-color: salmon;
+}
+.circle8-3 {
+  background-color: coral;
+}
+
+@keyframes loading8 {
+  100% {
+    opacity: 1;
+  }
+}
+/* 08. Loading Animations*/
+/* ----------------------- */
+
+/* ---------------- */
+/* 07. Loading Liquid */
+.body7 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 500px;
+  background-color: lightcoral;
+}
+
+.h1-7 {
+  font-size: 130px;
+  font-weight: 800;
+  position: absolute;
+}
+
+.text7 {
+  color: lightgrey;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+.text7-liquid {
+  color: lightskyblue;
+  animation: wave7 3s ease-in-out infinite;
+}
+
+@keyframes wave7 {
+  0%,
+  100% {
+    clip-path: polygon(
+      1% 99%,
+      0% 52%,
+      22% 65%,
+      51% 74%,
+      76% 65%,
+      99% 54%,
+      100% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      1% 100%,
+      0% 58%,
+      26% 43%,
+      52% 36%,
+      79% 46%,
+      100% 62%,
+      100% 100%
+    );
+  }
+}
+/* 07 Loading Liquid */
+/* ----------------------- */
+
+/* ---------------- */
+/* 06. Poseidon Wave */
+.body6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 500px;
+  background-color: lightgray;
+}
+
+.box6 {
+  width: 200px;
+  height: 200px;
+  background-color: lightslategray;
+  border: 5px solid lightslategray;
+  position: relative;
+  overflow: hidden;
+}
+
+.box6::before {
+  content: "POSEIDON";
+  font-size: 32px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.box6::after {
+  content: "";
+  width: 200%;
+  height: 200%;
+  background-color: lightskyblue;
+  position: absolute;
+  border-radius: 30%;
+  left: -50%;
+  animation: wave6 5s ease-in-out infinite;
+}
+
+@keyframes wave6 {
+  to {
+    transform: translateY(-80%) rotate(500deg);
+  }
+}
+
+/* 06. Poseidon Wave */
+/* ----------------------- */
+
+/* ---------------- */
+/* 05. Text Animation*/
+.body5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 500px;
+  background-color: lightslategray;
+}
+
+.h1-5 {
+  font-size: 50px;
+  font-weight: 700;
+  position: relative;
+  /* color: lightslategray; */
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+.h1-5::before {
+  content: "WEB DESIGN";
+  color: cadetblue;
+  text-shadow: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  overflow: hidden;
+  border-right: 20px solid cadetblue;
+  white-space: nowrap;
+  animation: move5 3s linear infinite;
+}
+
+@keyframes move5 {
+  to {
+    width: 100%;
+  }
+}
+/* 05 Text Animation */
+/* ----------------------- */
+
+/* ---------------- */
+/* 04. Heart Beats*/
+.body4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 500px;
+}
+
+.icon4-cont {
+  color: red;
+  font-size: 50px;
+}
+
+.heart-icon {
+  animation: beat 0.7s linear infinite;
+}
+
+@keyframes beat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(1.3);
+  }
+}
+/* 04. Heart Beats*/
+/* ----------------------- */
+
+/* ---------------- */
+/* 03. Calling Button */
+.body3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 500px;
+}
+
+.phone3 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: limegreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+}
+
+.icon3 {
+  transform: rotate(-30deg);
+  animation: shake3 1s alternate infinite;
+}
+
+.phone3::before,
+.phone3::after {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  border: 1px solid limegreen;
+}
+
+.phone3::before {
+  animation: move3 1.5s linear infinite;
+}
+
+.phone3::after {
+  animation: move3 1.5s 0.4s linear infinite;
+}
+
+@keyframes move3 {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes shake3 {
+  0% {
+    transform: rotate(-30deg);
+  }
+  30% {
+    transform: rotate(-35deg);
+  }
+  60% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(-35deg);
+  }
+}
+/* 03. Calling Button */
+/* ----------------------- */
+
+/* ---------------- */
+/* 02. Hovered Button */
+.body2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  width: 500px;
+}
+
+button {
+  border: none;
+  padding: 15px;
+  width: 200px;
+  font-size: 20px;
+  color: white;
+  position: relative;
+}
+
+.button2-1 {
+  background-color: black;
+}
+
+.button2-1::before {
+  content: "JOKING!";
+  width: 100%;
+  height: 0%;
+  background-color: purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.button2-1::after {
+  content: "DON'T WORRY!";
+  width: 100%;
+  height: 0%;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.button2-1:hover.button2-1::before {
+  animation: retrive2 1s forwards;
+}
+
+.button2-1:hover.button2-1::after {
+  animation: retrive2 1s 1s alternate infinite;
+}
+
+@keyframes retrive2 {
+  to {
+    height: 100%;
+  }
+}
+
+/* 02. Hovered Button*/
+/* ----------------------- */
+
+/* ---------------------- */
+/* 01. Down Arrow */
+
+.body1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  height: 80px;
+  width: 500px;
+  color: white;
+}
+
+.container1 {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: coral;
+  border-radius: 50%;
+  position: relative;
+}
+
+.container1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  background-color: coral;
+  z-index: -1;
+  animation: move1 1.2s ease infinite;
+}
+
+@keyframes move1 {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* 01. Down Arrow */
+/* ---------------------- */
