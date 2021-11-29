@@ -18,13 +18,310 @@ body {
 /* ----------------------- */
 
 /* ---------------- */
+/* 15. Neon Text */
+.body15 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 500px;
+}
+/* 15. Neon Text */
+/* ----------------------- */
+
+/* ---------------- */
+/* 14. Pay Button */
+.body14 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 500px;
+  background-color: lightcoral;
+}
+
+.cont14 {
+  width: 400px;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  overflow: hidden;
+}
+
+.interactive-cont14 {
+  width: 150px;
+  height: 100px;
+  background-color: teal;
+  position: relative;
+}
+
+.text-cont14 {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.card14 {
+  width: 70px;
+  height: 40px;
+  background-color: rgb(135, 250, 215);
+  border-radius: 5px;
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+
+.card-circles14 {
+  position: absolute;
+  top: 25px;
+  left: 5px;
+  display: flex;
+}
+
+.card-circle {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.card-circle:nth-child(1) {
+  background-color: rgb(120, 212, 83);
+}
+.card-circle:nth-child(2) {
+  background-color: rgb(80, 153, 51);
+}
+.card-circle:nth-child(3) {
+  background-color: rgb(40, 95, 18);
+}
+
+.post14 {
+  width: 60px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: lightgray;
+  position: absolute;
+  top: 100px;
+  left: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.4s 0.2s;
+}
+
+.post-line14 {
+  width: 50px;
+  height: 10px;
+  background-color: gray;
+  position: relative;
+}
+
+.post-line14::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgb(78, 77, 77);
+  position: absolute;
+  bottom: -10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.post-screen14 {
+  width: 50px;
+  height: 30px;
+  background-color: whitesmoke;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: teal;
+  font-weight: bold;
+}
+
+.post-text14 {
+  opacity: 0;
+  transition-delay: 1s;
+}
+
+.post-numbers14 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post-number {
+  margin: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+}
+
+.cont14:hover .card14 {
+  animation: moveCard14 1.2s ease forwards;
+}
+
+@keyframes moveCard14 {
+  50% {
+    transform: rotate(-90deg) scale(0.8) translateX(70px);
+  }
+  100% {
+    transform: rotate(-90deg) scale(0.8) translateX(0px);
+  }
+}
+
+.cont14:hover .post14 {
+  transform: translateY(-70px);
+}
+
+.cont14:hover .post-text14 {
+  opacity: 1;
+}
+
+/* 14. Pay Button */
+/* ----------------------- */
+
+/* ---------------- */
+/* 13. Designer Text */
+.body13 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 500px;
+  background-color: #333;
+  color: white;
+}
+
+.cont13 {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-top13 {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+  overflow: hidden;
+}
+
+.row-top13::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: gold;
+  animation: moveBox13 2s cubic-bezier(0, 0.5, 0.5, 0) forwards;
+}
+
+.title13 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 5px;
+  opacity: 0;
+  animation: moveText13 2s 2s ease forwards;
+}
+
+.dot13 {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: gold;
+  opacity: 0;
+  animation: moveDot13 0.5s 2s cubic-bezier(0, 0.5, 0.5, 0) forwards;
+}
+
+@keyframes moveBox13 {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes moveText13 {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes moveDot13 {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
+
+.row-bottom13 {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+  padding: 0 5px;
+  overflow: hidden;
+}
+
+.row-bottom13::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -100%;
+  background-color: tomato;
+  animation: moveBox13 2s 2s cubic-bezier(0, 0.5, 0.5, 0) forwards;
+}
+
+.desc13 {
+  color: lightgray;
+  font-weight: 200;
+  font-size: 15px;
+  opacity: 0;
+  animation: moveText13 2s 3s ease forwards;
+}
+/* 13. Designer Text */
+/* ----------------------- */
+
+/* ---------------- */
 /* 12. DROP animation */
 .body12 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 300px;
-  width: 500px;
+  height: 250px;
+  width: 600px;
+}
+
+.h1-12 {
+  font-size: 100px;
+  color: slateblue;
+}
+
+.containerh1-12 {
+  font-size: 100px;
+  color: slateblue;
+  position: relative;
+}
+
+.drop12 {
+  position: absolute;
+  background-color: slateblue;
+  clip-path: ellipse(25% 40% at 50% 50%);
+  width: 28px;
+  height: 25px;
+  bottom: 60px;
+  animation: move12 3s cubic-bezier(0.05, 0.34, 1, -0.1) infinite;
+}
+
+@keyframes move12 {
+  to {
+    transform: translateY(300px);
+  }
 }
 /* 12. DROP animation */
 /* ----------------------- */
