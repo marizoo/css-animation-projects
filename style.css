@@ -23,8 +23,31 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 500px;
+  height: 300px;
   width: 500px;
+  background-color: black;
+  animation: glow15 ease-in-out 1s alternate infinite;
+}
+
+.h2-15 {
+  font-size: 50px;
+  color: white;
+  font-weight: 100;
+}
+
+sup {
+  font-size: 25px;
+}
+
+@keyframes glow15 {
+  from {
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    /* text-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px #e60073,
+      0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073, 0 0 80px #e60073; */
+  }
 }
 /* 15. Neon Text */
 /* ----------------------- */
